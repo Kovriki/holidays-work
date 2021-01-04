@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>#1</title>
+    <link rel="shortcut icon" href="images/x-icon.ico" type="image/x-icon">
+    <style media="screen">
+      .btn1{
+        width: 50px;
+        height: 50px;
+        background-color: #040404;
+        border-radius: 25%;
+        position:relative;
+        display: inline-block;
+        margin-top: 40vw;
+        padding: .3%;
+      }
+      .btn2{
+        width: 50px;
+        height: 50px;
+        background-color: #040404;
+        border-radius: 25%;
+        position:relative;
+        display: inline-block;
+        margin-left: 90vw;
+        padding: .3%;
+      }
+      a {
+        width: 50px;
+        height: 50px;
+        color: white;
+        text-align: center;
+      }
+      p{ width: 60vw;}
+      .move{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        padding-right: 100px;
+        animation: movement 4s cubic-bezier(.18,.48,.68,.37) infinite alternate;
+        animation-delay: 2s;
+      }
+      .circle{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-color: black;
+        border-radius: 50%;
+
+      }
+
+      @keyframes movement {
+      0%{left: 0}
+      100%{left:calc(100vw - 100px)}
+      }
+    </style>
+  </head>
+  <body>
+    <p>### Задача:
+
+Сделать анимацию круга, ударяющего при&nbspдвижении о&nbspкрая вьюпорта.
+
+Минимум 20 касаний края вьюпорта
+Анимация должны быть идеально зациклена
+Должно одинаково работать на&nbspвсех размерах вьюпорта
+*&nbspВ&nbspидеале реализовать респонсив без&nbspмедиа-запросов</p>
+<div class="move"><div class="circle"></div></div>
+<a href="zadanie-2.html"><div class="btn1"><p>2</p></div></a>
+<a href="zadanie-3.html"><div class="btn2"><p>3</p></div></a>
+
+  </body>
+</html>
