@@ -2,33 +2,102 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>zadanie2</title>
     <style media="screen">
+    .figma_sun{
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: -100vh;
+      /* left: 30vw; */
+      background: url(images/sun.svg) no-repeat center;
+      background-size: contain;}
+
+      .path1 {
+        position: relative;
+        width: 48vw;
+        height: 50vh;
+        margin: 0;
+        display: inline-block;
+        background-color: yellow;
+      }
+      .path2 {
+        position: relative;
+        width: 48vw;
+        height: 50vh;
+        margin: 0;
+        display: inline-block;
+        background-color: green;
+      }
+      .path3 {
+        position: relative;
+        width: 48vw;
+        height: 50vh;
+        margin: 0;
+        display: inline-block;
+        background-color: red;
+      }
+      .path4 {
+        position: relative;
+        width: 48vw;
+        height: 50vh;
+        margin: 0;
+        display: inline-block;
+        background-color: cyan;
+      }
       .sun{
-        width: 100vw;
-        height: 50vw;
-        background: url(images/sun.svg) no-repeat center;
-        background-size: contain;
-        mask: url(images/rectangle.svg);  }
-        .plesk{
-          display: inline-block;
-position: relative;
-width: 1064px;
-height: 632px;
-          mask-type: alpha;
--webkit-mask: url("images/plesk-group.svg");
-mask: url("https://simonzlo.github.io/Plesk_poster/images/plesk_group1.svg");
-animation: pl2-1-group 1s steps(1) infinite;
-animation-play-state: paused;
-background-color: black;
+        position: absolute;
+        width: 100vh;
+        height: 100vh;
+       */
+        overflow: hidden;
+        -webkit-clip-path: url(#clip);}
+
+        .telesun_main{
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          top:0;
+          /* left:20vw; */
+          background: url(images/telesun.svg);
+          background-size: cover;
         }
-    </style>
-  </head>
-  <body>
-<p>hello^ world!</p>
+      .telesun{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        /* left:20vw; */
 
-<div class="sun">
+      }
+      .telesun_mask{
+        width: 100vw;
+        height: 100vh;
+        /* position: absolute; */
 
+        mask: url(images/telesun-mask.svg);
+        mask-size: cover;
+        -webkit-mask: url(images/telesun-mask.svg)
+        -webkit-mask-size: cover;
+      }
+        </style>
+      </head>
+      <body>
+    <div class="path1"></div>
+    <div class="path2"></div>
+    <div class="path3"></div>
+    <div class="path4"></div>
+    <div class="sun">
+      <div class="figma_sun">
+
+      </div>
+
+  <div class="telesun_mask">
+    <div class="telesun_main">
+    </div>
+      
 </div>
-  </body>
-</html>
+</div>
+</div>
+      </body>
+    </html>
