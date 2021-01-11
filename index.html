@@ -37,36 +37,67 @@
         width: 100px;
         height: 100px;
         padding-right: 100px;
-        animation: movement 4s cubic-bezier(.18,.48,.68,.37) infinite alternate;
-        animation-delay: 2s;
+        /* animation: movement 4s cubic-bezier(.18,.48,.68,.37) infinite alternate; */
+        animation: movement_hard 20s linear infinite alternate;
+
+        /* animation-delay: 2s; */
       }
       .circle{
-        width: 100px;
-        height: 100px;
+        width: 10vw;
+        height: 10vw;
         position: absolute;
         background-color: black;
         border-radius: 50%;
 
+
+
+
       }
+
+
+@keyframes movement_hard {
+0% {top: 0;left: 0;}
+5% {top: 30vh; left: 90vw;}
+10% {top: calc(100vh - 10vw); left: 50vw;}
+15% {top: 0; left: 10vw;}
+20% {top: calc(100vh - 30vh);left: 0;}
+25% {top: 0; left: calc(100vw - 70vw)}
+30% {top: calc(100vh - 10vw); left: 40vw;}
+40% {top: 0; left: 70vw;}
+45% {top: calc(100vh - 10vw); left: 80vw}
+50% {top: calc(100vh - 10vw);left: 0;}
+55% {top: 70vh; left: 90vw;}
+60% {top: 50vh; left: 0;}
+65% {top: 30vh;left: 90vw;}
+70% {top: 0;left: 0;}
+
+75% {top: calc(100vh - 10vw); left: 50vw;}
+80% {top: 50vh;left: 90vw;}
+85% {top: 50vh;left: 0;}
+90% {top: 0;left: 50vw;}
+95% {top: calc(100vh - 10vw);left: 50vw;}
+100% {top:0;left: 0;}
+     }
+
 
       @keyframes movement {
       0%{left: 0}
-      100%{left:calc(100vw - 100px)}
+      100%{left:calc(100vw - 10vw)}
       }
     </style>
   </head>
   <body>
-    <p>### Задача:
+    <!-- <p>### Задача:
 
 Сделать анимацию круга, ударяющего при&nbspдвижении о&nbspкрая вьюпорта.
 
 Минимум 20 касаний края вьюпорта
 Анимация должны быть идеально зациклена
 Должно одинаково работать на&nbspвсех размерах вьюпорта
-*&nbspВ&nbspидеале реализовать респонсив без&nbspмедиа-запросов</p>
+*&nbspВ&nbspидеале реализовать респонсив без&nbspмедиа-запросов</p> -->
 <div class="move"><div class="circle"></div></div>
-<a href="zadanie-2.html"><div class="btn1"><p>2</p></div></a>
-<a href="zadanie-3.html"><div class="btn2"><p>3</p></div></a>
+<!-- <a href="zadanie-2.html"><div class="btn1"><p>2</p></div></a>
+<a href="zadanie-3.html"><div class="btn2"><p>3</p></div></a> -->
 
   </body>
 </html>
