@@ -12,8 +12,9 @@
         border-radius: 25%;
         position:relative;
         display: inline-block;
-        margin-top: 40vw;
-        padding: .3%;
+        /* margin-top: 40vw; */
+        justify-content: center;
+        align-content: center;
       }
       .btn2{
         width: 50px;
@@ -22,16 +23,20 @@
         border-radius: 25%;
         position:relative;
         display: inline-block;
-        margin-left: 90vw;
-        padding: .3%;
+        /* margin-left: 90vw; */
+        justify-content: center;
+        align-content: center;
+
+
       }
       a {
         width: 50px;
         height: 50px;
         color: white;
         text-align: center;
+        display: inline-block;
       }
-      p{ width: 60vw;}
+      /* p{ width: 60vw;} */
       .move{
         position: relative;
         width: 100px;
@@ -39,7 +44,6 @@
         padding-right: 100px;
         /* animation: movement 4s cubic-bezier(.18,.48,.68,.37) infinite alternate; */
         animation: movement_hard 20s linear infinite alternate;
-
         /* animation-delay: 2s; */
       }
       .circle{
@@ -49,11 +53,11 @@
         background-color: black;
         border-radius: 50%;
 
-
-
-
       }
-
+.btn1 p {
+  justify-content: center;
+  align-content: center;
+}
 
 @keyframes movement_hard {
 0% {top: 0;left: 0;}
@@ -84,20 +88,30 @@
       0%{left: 0}
       100%{left:calc(100vw - 10vw)}
       }
+      .vp{
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid black;
+        margin-top: 15px;
+      }
     </style>
   </head>
   <body>
-    <!-- <p>### Задача:
+    <p style="width:600px;">### Задача:
 
-Сделать анимацию круга, ударяющего при&nbspдвижении о&nbspкрая вьюпорта.
+    Сделать анимацию круга, ударяющего при&nbspдвижении о&nbspкрая вьюпорта.
 
-Минимум 20 касаний края вьюпорта
-Анимация должны быть идеально зациклена
-Должно одинаково работать на&nbspвсех размерах вьюпорта
-*&nbspВ&nbspидеале реализовать респонсив без&nbspмедиа-запросов</p> -->
-<div class="move"><div class="circle"></div></div>
-<!-- <a href="zadanie-2.html"><div class="btn1"><p>2</p></div></a>
-<a href="zadanie-3.html"><div class="btn2"><p>3</p></div></a> -->
+    Минимум 20 касаний края вьюпорта
+    Анимация должны быть идеально зациклена
+    Должно одинаково работать на&nbspвсех размерах вьюпорта
+    *&nbspВ&nbspидеале реализовать респонсив без&nbspмедиа-запросов</p>
+    <a href="zadanie-2.html"><div class="btn1"><p>2</p></div></a>
+    <a href="zadanie-3.html"><div class="btn2"><p>3</p></div></a>
+
+<div class="vp">
+  <div class="move"><div class="circle"></div></div>
+</div>
+
 
   </body>
 </html>
