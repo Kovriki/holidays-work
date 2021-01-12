@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <!-- <link rel="stylesheet" href="/css/master.css"> -->
     <style media="screen">
 input{
-  width: 200px;
-  height: 100px;
-  background-color: orange;
-  border-radius: 20px;
+  width: 0;
+  height: 0;
 }
 .vp{
   width: 100%;
@@ -17,49 +16,45 @@ input{
 .duck {
   width: 383px;
   height: 480px;
-  background: url(https://raw.githubusercontent.com/Kovriki/holidays-work/0b9f575b011f3d42e21f66cb81d07be9f41c40db/images/duckscript.svg);
+  /* background: url(https://raw.githubusercontent.com/Kovriki/holidays-work/0b9f575b011f3d42e21f66cb81d07be9f41c40db/images/duckscript.svg); */
+  background: url(https://raw.githubusercontent.com/Kovriki/holidays-work/290733634bc2b9d9549dc9a4359a7b8e0ad9aabb/images/duck-stringsteps.svg);
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: left:1532;
-  background-position: top:480;
-animation: duck_walk 10s steps(30) infinite;
+
+animation: duck_walk 1s steps(14) infinite paused;
 }
 @keyframes duck_walk {
-  0% {background-position: right 100% top 0;}
-  100% {background-position: right 0 top 0;}
+  0% {background-position: left 0 top 0;}
+  100% {background-position: left 100%  top 0;}
 }
-/* @keyframes move {
-  0% {background-position: top: 0  ; left:  0    ;}
-6.25% {background-position: top:   ; left:      ;}
-12.5% {background-position: top:   ; left:      ;}
-18.75% {background-position: top:   ; left:      ;}
-25.0% {background-position: top:   ; left:      ;}
-31.25% {background-position: top:   ; left:      ;}
-37.5% {background-position: top:   ; left:      ;}
-43.75% {background-position: top:   ; left:      ;}
-50.0% {background-position: top:   ; left:      ;}
-56.25% {background-position: top:   ; left:      ;}
-62.5% {background-position: top:   ; left:      ;}
-68.75% {background-position: top:   ; left:      ;}
-75.0% {background-position: top:   ; left:      ;}
-81.25% {background-position: top:   ; left:      ;}
-87.5% {background-position: top:   ; left:      ;}
-93.75% {background-position: top:   ; left:      ;}
+.vp label {
 
-} */
+display: flex;
+width: 100px;
+height: 50px;
+font-size: 30px;
+margin: 20px;
+background: orange;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+
+}
+.vp input[type="checkbox"]:checked ~ .duck {
+animation-play-state: running;
+}
+.vp input[type="checkbox"]:checked ~ label{}
+
     </style>
   </head>
   <body>
   <p>доберусь ли я до сюда??</p>
   <div class="vp">
-    <div class="btn">
-      <!-- <input type="button" name="" value=""> -->
-      <input type="checkbox" name="btn" value="btn">
+
+      <input type="checkbox" id="btn">
       <label for="btn">btn</label>
-
-
-    </div>
-    <div class="duck">  </div>
+      <div class="duck"></div>
+      <audio id="music" loop="loop" src="https://youtu.be/DbuebKNKQsQ"></audio>
   </div>
   </body>
 </html>
