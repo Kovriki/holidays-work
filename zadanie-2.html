@@ -5,21 +5,29 @@
     <title>zadanie2</title>
     <style media="screen">
     .figma_sun{
-      width: 100vw;
+      width: 60vw;
       height: 100vh;
       position: absolute;
       top: -100vh;
-      /* left: 30vw; */
+      left: 20vw;
       background: url(images/sun.svg) no-repeat center;
       background-size: contain;}
+    .ricksun {
+      width: 100vh;
+      height: 100vh;
+      position: absolute;
+      top: -100vh;
+      left: 40vw;
+      background: url(images/ricksun.png) no-repeat center;
+      background-size: contain;}
 
-      .path1 {
+      .yellow{
         position: relative;
         width: 48vw;
         height: 50vh;
         margin: 0;
         display: inline-block;
-        background-color: yellow;
+        background: yellow;
       }
       .path2 {
         position: relative;
@@ -27,7 +35,7 @@
         height: 50vh;
         margin: 0;
         display: inline-block;
-        background-color: green;
+        background: green;
       }
       .path3 {
         position: relative;
@@ -35,7 +43,7 @@
         height: 50vh;
         margin: 0;
         display: inline-block;
-        background-color: red;
+        background: red;
       }
       .path4 {
         position: relative;
@@ -43,7 +51,7 @@
         height: 50vh;
         margin: 0;
         display: inline-block;
-        background-color: cyan;
+        background: cyan;
       }
       .sun{
         position: absolute;
@@ -80,22 +88,43 @@
         -webkit-mask: url(images/telesun-mask.svg)
         -webkit-mask-size: cover;
       }
+
+      .rick {
+        position: absolute;
+        overflow: hidden;
+        top: 20vh;
+        left: calc(50vw - 30vw);
+        width: 60vw;
+        height: 65vh;
+        display: none;
+      }
+      .rick img {
+        position: relative;
+        height: 65vh;
+        width: 60vw;
+        object-fit: cover;
+      }
+      .yellow:hover ~ .rick {
+        display: block;
+      }
         </style>
       </head>
       <body>
-    <div class="path1"></div>
+    <div class="yellow"></div>
     <div class="path2"></div>
     <div class="path3"></div>
     <div class="path4"></div>
+
     <div class="sun">
-      <div class="figma_sun">
-
+      <!-- <div class="figma_sun"></div> -->
+      <!-- <div class="ricksun"></div> -->
+      <div class="rick">
+        <img src="ricksun.png" alt="">
       </div>
-
-  <div class="telesun_mask">
+  <!-- <div class="telesun_mask">
     <div class="telesun_main">
-    </div>
-      
+    </div> -->
+
 </div>
 </div>
 </div>
