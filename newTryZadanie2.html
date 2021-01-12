@@ -28,26 +28,45 @@
     width: 856px;
     height: 856px;
     position: absolute;
-    top: 80px;
+    top: 0;
     left: 20vw;
-    background: url("images/sun.svg") no-repeat 100%;
+    transition: .3s;
 
-
-
-
+    /* background: url("images/sun.svg") no-repeat 100%; */
+    background-color: cyan;
     mask-type: alpha;
-
+    -webkit-mask: url('https://raw.githubusercontent.com/Kovriki/holidays-work/8c23bf3895937005414ba6cd9ff310de2730f498/images/star-mask.svg');
   }
-
+  .chColor{
+    display: inline-block;
+    /* flex: 1; */
+    width: 48.7vw;
+    height: 50vh;
+    background-color: black;
+    /* border: 1px solid white; */
+  }
+  #orange {
+    /* background-color: orange; */
+    transition: .2s;
+  }
+  #orange:hover ~ .star {
+    background-color: orange;
+    transition: .2s;
+  }
 
   </style>
   <body>
-    <div class="star">
+
+  <div class="chColor" id="orange"></div>
+  <div class="chColor"></div>
+  <div class="chColor"></div>
+  <div class="chColor"></div>
+
+  <div class="star">
 
     </div>
         <!-- <div class="telesun_mask">
           <div class="telesun_main"> -->
-
         </div>
       </div>
   </body>
