@@ -2,162 +2,122 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>zadanie2</title>
-    <style media="screen">
-
-    .btn1{
+    <title></title>
+  </head>
+  <style media="screen">
+  .btn1{
+    width: 50px;
+    height: 50px;
+    background-color: #040404;
+    border-radius: 25%;
+    position:relative;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+  }
+  .btn2{
+    width: 50px;
+    height: 50px;
+    background-color: #040404;
+    border-radius: 25%;
+    position:relative;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;}
+    a {
       width: 50px;
       height: 50px;
-      background-color: #040404;
-      border-radius: 25%;
-      position:relative;
+      color: white;
+      text-align: center;
       display: inline-block;
-      justify-content: center;
-      align-content: center;
     }
-    .btn2{
-      width: 50px;
-      height: 50px;
-      background-color: #040404;
-      border-radius: 25%;
-      position:relative;
-      display: inline-block;
-      justify-content: center;
-      align-content: center;}
-      a {
-        width: 50px;
-        height: 50px;
-        color: white;
-        text-align: center;
-        display: inline-block;
-      }
 
-
-
-    .figma_sun{
-      width: 60vw;
+  .telesun_main{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    /* left:20vw; */
+    background: url(images/telesun.svg);
+    background-size: cover;
+  }
+    .telesun_mask{
+      width: 100vw;
       height: 100vh;
-      position: absolute;
-      top: -100vh;
-      left: 20vw;
-      background: url(images/sun.svg) no-repeat center;
-      background-size: contain;}
-    .ricksun {
-      width: 100vh;
-      height: 100vh;
-      position: absolute;
-      top: -100vh;
-      left: 40vw;
-      background: url(images/ricksun.png) no-repeat center;
-      background-size: contain;}
+      /* position: absolute; */
+      mask: url("https://raw.githubusercontent.com/Kovriki/holidays-work/34e30b1ef46892a501e0a0e2c734b9fb48988d9f/images/telesun-mask.svg");
+      mask-size: cover;
+      -webkit-mask: url("https://raw.githubusercontent.com/Kovriki/holidays-work/34e30b1ef46892a501e0a0e2c734b9fb48988d9f/images/telesun-mask.svg")
+      -webkit-mask-size: cover;
+    }
 
-      .yellow{
-        position: relative;
-        width: 48vw;
-        height: 50vh;
-        margin: 0;
-        display: inline-block;
-        background: yellow;
-      }
-      .path2 {
-        position: relative;
-        width: 48vw;
-        height: 50vh;
-        margin: 0;
-        display: inline-block;
-        background: green;
-      }
-      .path3 {
-        position: relative;
-        width: 48vw;
-        height: 50vh;
-        margin: 0;
-        display: inline-block;
-        background: red;
-      }
-      .path4 {
-        position: relative;
-        width: 48vw;
-        height: 50vh;
-        margin: 0;
-        display: inline-block;
-        background: cyan;
-      }
-      .sun{
-        position: absolute;
-        width: 100vh;
-        height: 100vh;
-       */
-        overflow: hidden;
-        -webkit-clip-path: url(#clip);}
+  .star{
+    width: 856px;
+    height: 856px;
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    transition: .3s;
+    background-color: cyan;
+    /* background: url("images/sun.svg") no-repeat 100%; */
 
-        .telesun_main{
-          width: 100vw;
-          height: 100vh;
-          position: absolute;
-          top:0;
-          /* left:20vw; */
-          background: url(images/telesun.svg);
-          background-size: cover;
-        }
-      .telesun{
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top:0;
-        /* left:20vw; */
+    mask-type: alpha;
+    mask-size:cover;
+    -webkit-mask: url('https://raw.githubusercontent.com/Kovriki/holidays-work/8c23bf3895937005414ba6cd9ff310de2730f498/images/star-mask.svg');
+  }
+  .chColor{
+    display: inline-block;
+    /* flex: 1; */
+    width: 48.7vw;
+    height: 50vh;
+    background-color: black;
+    /* border: 1px solid white; */
+  }
+  #orange {
+    /* background-color: orange; */
+    transition: .2s;
+  }
+  #blue {
+    /* background-color: blue; */
+    transition: .2s;
+  }
+  #green{
+    /* background-color: green; */
+    transition: .2s;
+  }
+  #yellow{
 
-      }
-      .telesun_mask{
-        width: 100vw;
-        height: 100vh;
-        /* position: absolute; */
+  }
 
-        mask: url(images/telesun-mask.svg);
-        mask-size: cover;
-        -webkit-mask: url(images/telesun-mask.svg)
-        -webkit-mask-size: cover;
+  #orange:hover ~ .star {
+    background-color: orange;
+    transition: .2s;
+  }
+  #green:hover ~ .star {
+    background-color: green;
+    transition: .2s;
+  }
+  #blue:hover ~ .star {
+      background-color: blue;
+      transition: .2s;
+    }
+  #yellow:hover ~ .star {
+      background-color: yellow;
+      transition: .2s;
       }
 
-      .rick {
-        position: absolute;
-        overflow: hidden;
-        top: 20vh;
-        left: calc(50vw - 30vw);
-        width: 60vw;
-        height: 65vh;
-        display: none;
-      }
-      .rick img {
-        position: relative;
-        height: 65vh;
-        width: 60vw;
-        object-fit: cover;
-      }
-      .yellow:hover ~ .rick {
-        display: block;
-      }
-        </style>
-      </head>
-      <body>
-    <div class="yellow"></div>
-    <div class="path2"></div>
-    <div class="path3"></div>
-    <div class="path4"></div>
+  </style>
+  <body>
 
-    <div class="sun">
-      <!-- <div class="figma_sun"></div> -->
-      <!-- <div class="ricksun"></div> -->
-      <div class="rick">
-        <img src="ricksun.png" alt="">
-      </div>
-  <!-- <div class="telesun_mask">
-    <div class="telesun_main">
-    </div> -->
+  <div class="chColor" id="orange"></div>
+  <div class="chColor" id="green"></div>
+  <div class="chColor" id="blue"></div>
+  <div class="chColor" id="yellow"></div>
+  <div class="star"></div>
 
-</div>
-
-<a href="index.html"><div class="btn1"><p>1</p></div></a>
-<a href="zadanie-3.html"><div class="btn2"><p>3</p></div></a>
-      </body>
-    </html>
+  <a href="index.html"><div class="btn2"><p>1</p></div></a>
+  <a href="zadanie-3.html"><div class="btn1"><p>3</p></div></a>
+        <!-- <div class="telesun_mask">
+          <div class="telesun_main"> -->
+  </body>
+</html>
